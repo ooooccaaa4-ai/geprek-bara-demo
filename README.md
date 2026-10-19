@@ -1,1 +1,0 @@
-# geprek-bara-demo
