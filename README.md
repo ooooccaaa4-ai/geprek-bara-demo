@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Demo website restoran Geprek Bara. Lihat menu dan hubungi kami untuk pemesanan.">
+  <title>Geprek Bara | Pedasnya Bikin Nagih</title>
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fffaf2;
+      color: #24211e;
+      line-height: 1.6;
+    }
+    a { text-decoration: none; }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 18px 6%;
+      background: #211c19;
+      color: white;
+    }
+    .brand { font-size: 21px; font-weight: 800; }
+    .brand span { color: #ff6b35; }
+    .nav a { color: white; font-size: 14px; }
+    .hero {
+      padding: 64px 7%;
+      color: white;
+      background: linear-gradient(135deg,#281c17,#7b241d,#c34525);
+    }
+    .tag {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 30px;
+      background: #ffffff20;
+      font-size: 12px;
+    }
+    h1 { font-size: clamp(36px,8vw,58px); line-height: 1.1; margin: 18px 0; }
+    .hero p { max-width: 460px; color: #ffeadb; }
+    .btn {
+      display: inline-block;
+      background: #ff6b35;
+      color: white;
+      padding: 13px 19px;
+      border-radius: 10px;
+      font-weight: bold;
+      margin-top: 12px;
+    }
+    .food-art {
+      margin-top: 30px;
+      min-height: 190px;
+      display: grid;
+      place-items: center;
+      border-radius: 22px;
+      background: radial-gradient(circle,#f6bd73,#7b241d);
+      font-size: 100px;
+    }
+    section { padding: 48px 6%; }
+    .eyebrow {
+      color: #d34b28;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    h2 { font-size: 29px; line-height: 1.2; margin: 8px 0 12px; }
+    .muted { color: #746b64; }
+    .menus {
+      display: grid;
+      grid-template-columns: repeat(2,minmax(0,1fr));
+      gap: 13px;
+      margin-top: 24px;
+    }
+    .card {
+      overflow: hidden;
+      border: 1px solid #eee3d6;
+      border-radius: 15px;
+      background: white;
+      padding: 16px;
+    }
+    .emoji {
+      display: grid;
+      place-items: center;
+      min-height: 100px;
+      border-radius: 12px;
+      background: #fff0df;
+      font-size: 48px;
+    }
+    .card h3 { font-size: 16px; margin: 12px 0 4px; }
+    .card p { font-size: 13px; color: #746b64; margin: 0; }
+    .price { color: #c43c20; font-weight: 800; margin-top: 12px; }
+    .features {
+      display: grid;
+      gap: 12px;
+      margin-top: 22px;
+    }
+    .feature {
+      background: white;
+      border: 1px solid #eee3d6;
+      border-radius: 12px;
+      padding: 15px;
+    }
+    .contact {
+      background: #211c19;
+      color: white;
+      text-align: center;
+    }
+    .contact p { color: #e8dcd2; }
+    footer {
+      padding: 22px;
+      text-align: center;
+      font-size: 12px;
+      color: #746b64;
+    }
+    @media(min-width:650px) {
+      .hero {
+        display: grid;
+        grid-template-columns: 1.1fr .9fr;
+        align-items: center;
+        gap: 36px;
+      }
+      .food-art { margin-top: 0; min-height: 300px; }
+      .menus { grid-template-columns: repeat(4,minmax(0,1fr)); }
+      .features { grid-template-columns: repeat(3,minmax(0,1fr)); }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="brand">GEPREK<span>BARA.</span></div>
+    <a href="#menu">Lihat Menu ↓</a>
+  </nav>
+
+  <header class="hero">
+    <div>
+      <span class="tag">DEMO WEBSITE RESTORAN</span>
+      <h1>Pedasnya Nendang,<br>Rasanya Juara!</h1>
+      <p>Ayam renyah, sambal pilihan, dan nasi hangat
+        untuk menemani waktu makanmu.</p>
+      <a class="btn" href="#menu">Jelajahi Menu →</a>
+    </div>
+    <div class="food-art" role="img" aria-label="Ilustrasi ayam geprek">🍗🌶️</div>
+  </header>
+
+  <section id="menu">
+    <div class="eyebrow">Pilihan favorit</div>
+    <h2>Menu Andalan Kami</h2>
+    <p class="muted">Pilih menu favoritmu hari ini.</p>
+
+    <div class="menus">
+      <article class="card">
+        <div class="emoji">🍗</div>
+        <h3>Ayam Geprek</h3>
+        <p>Ayam renyah dengan sambal.</p>
+        <div class="price">Rp15.000</div>
+      </article>
+      <article class="card">
+        <div class="emoji">🍚</div>
+        <h3>Paket Geprek</h3>
+        <p>Ayam, nasi, dan sambal.</p>
+        <div class="price">Rp18.000</div>
+      </article>
+      <article class="card">
+        <div class="emoji">🍜</div>
+        <h3>Mie Pedas</h3>
+        <p>Mie dengan tingkat pedas pilihan.</p>
+        <div class="price">Rp12.000</div>
+      </article>
+      <article class="card">
+        <div class="emoji">🧋</div>
+        <h3>Es Teh</h3>
+        <p>Minuman segar teman makan.</p>
+        <div class="price">Rp4.000</div>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Kenapa kami?</div>
+    <h2>Makan Enak, Tanpa Ribet</h2>
+    <div class="features">
+      <div class="feature">🍗<br><b>Menu pilihan</b><br><small>Beragam menu untuk dicoba.</small></div>
+      <div class="feature">🌶️<br><b>Pilihan sambal</b><br><small>Sesuaikan dengan seleramu.</small></div>
+      <div class="feature">💬<br><b>Mudah dihubungi</b><br><small>Tanyakan menu lewat WhatsApp.</small></div>
+    </div>
+  </section>
+
+  <section class="contact" id="kontak">
+    <div class="eyebrow">Hubungi kami</div>
+    <h2>Siap Menikmati Menu Kami?</h2>
+    <p>Jam buka: sesuaikan dengan jam operasional usaha.</p>
+    <p>Alamat: masukkan alamat usaha yang sebenarnya.</p>
+    <a class="btn" href="https://wa.me/6281234567890?text=Halo%2C%20saya%20ingin%20bertanya%20tentang%20menu"
+       target="_blank" rel="noopener">Chat WhatsApp →</a>
+  </section>
+
+  <footer>
+    <p>Geprek Bara — Contoh konsep website untuk portofolio.</p>
+    <p>Nama, menu, harga, dan kontak di atas masih berupa contoh.</p>
+    <p>© <span id="year"></span> Geprek Bara</p>
+  </footer>
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+</body>
+</html>
